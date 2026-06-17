@@ -4,7 +4,9 @@ A collection of Docker images for running [OVOS](https://openvoiceos.org) servic
 
 > Easily spin up TTS, STT, and Wake Word services using Docker and Docker Compose.
 
-![OVOS Wyoming](https://github.com/user-attachments/assets/cc5e69ae-7549-45a9-a48f-94d57d07129c)
+![OVOS assist via ollama integration](https://github.com/user-attachments/assets/906befdb-1c7d-4580-9f7e-039bf6c75b73)
+
+![OVOS Wyoming plugins](https://github.com/user-attachments/assets/cc5e69ae-7549-45a9-a48f-94d57d07129c)
 
 ---
 

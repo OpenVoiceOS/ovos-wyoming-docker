@@ -38,7 +38,7 @@ RUN pip3 install aiohttp \
   && if [ "${ALPHA}" == "true" ]; then \
   pip3 install SpeechRecognition git+https://github.com/OpenVoiceOS/ovos-tts-plugin-matxa-multispeaker-cat --pre; \
   else \
-  pip3 install SpeechRecognition ovos-tts-plugin-matxa-multispeaker-cat; \
+  pip3 install SpeechRecognition git+https://github.com/OpenVoiceOS/ovos-tts-plugin-matxa-multispeaker-cat; \
   fi \
   && rm -rf ${HOME}/.cache
 

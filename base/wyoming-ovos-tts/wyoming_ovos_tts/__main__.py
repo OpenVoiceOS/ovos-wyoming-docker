@@ -58,7 +58,7 @@ async def main() -> None:
                 version="1.0.0",
                 voices=[
                     TtsVoice(
-                        name=f"{args.plugin_name}",
+                        name=f"{tts.voice or tts.lang or args.plugin_name}",
                         description=f"OVOS TTS Plugin: {args.plugin_name}",
                         attribution=Attribution(
                             name="OpenVoiceOS",
