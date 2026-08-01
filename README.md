@@ -1,24 +1,22 @@
-# 🐳 OVOS Wyoming Docker
+# OVOS Wyoming Docker
 
-A collection of Docker images for running [OVOS](https://openvoiceos.org) services using the [Wyoming Protocol](https://github.com/Rhasspy/wyoming).
-
-> Easily spin up TTS, STT, and Wake Word services using Docker and Docker Compose.
+A collection of Docker images for running [OVOS](https://openvoiceos.org) services using the [Wyoming Protocol](https://github.com/Rhasspy/wyoming). Use these images to run TTS, STT, and wake word services with Docker and Docker Compose.
 
 ![OVOS Wyoming](https://github.com/user-attachments/assets/cc5e69ae-7549-45a9-a48f-94d57d07129c)
 
 ---
 
-## 🚀 Getting Started
+## Getting started
 
-### 🔧 Build the Images
+### Build the images
 
-You can build all images manually:
+Build all images manually:
 
 ```bash
 ./build.sh
 ```
 
-Or use Docker Compose to build:
+Or build them with Docker Compose:
 
 ```bash
 docker compose build
@@ -26,30 +24,29 @@ docker compose build
 
 ### Add to Home Assistant
 
-use the wyoming integration to add TTS/STT/WakeWords
+Add the services to Home Assistant with the Wyoming integration.
 
 ![image](https://github.com/user-attachments/assets/ad44dbea-1cae-4dbd-9a9d-0bdb9688f98f)
 
 ![image](https://github.com/user-attachments/assets/4c8ebdca-cc80-4747-ab3a-9a4b23d70343)
 
-
-use the Ollama integration to add the OVOS agent
+Add the OVOS agent with the Ollama integration.
 
 ![image](https://github.com/user-attachments/assets/18e28f47-7acf-4f36-a121-4451cec66a38)
 
 ![image](https://github.com/user-attachments/assets/9f6ed44a-8303-49ee-ae9b-29604bfb38f6)
 
-point your wyoming satellites to OVOS
+Point your Wyoming satellites to OVOS.
 
 ![image](https://github.com/user-attachments/assets/e71a9a4b-8a47-418c-9ab8-529264c8ad3b)
 
 ---
 
-## 🧩 Compose Setup
+## Compose setup
 
-Customize your `docker-compose.yml` to fit your needs. Below is an example with multiple TTS, STT, and Wake Word services.
+Edit `docker-compose.yml` to fit your setup. Below is an example with multiple TTS, STT, and wake word services.
 
-> **Note:** Update `${CONFIG_BASE_DIR}` to the path containing your `mycroft.conf`.
+Set `${CONFIG_BASE_DIR}` to the path that holds your `mycroft.conf` file.
 
 ```yaml
 services:
@@ -146,15 +143,15 @@ services:
 
 ---
 
-## 📁 Configuration
+## Configuration
 
-All services rely on a shared `mycroft.conf` file, typically located at:
+All services use a shared `mycroft.conf` file. This file is usually at:
 
 ```
 /etc/mycroft/mycroft.conf
 ```
 
-Set `${CONFIG_BASE_DIR}` to the base directory where your config is stored, for example:
+Set `${CONFIG_BASE_DIR}` to the base directory that holds your config, for example:
 
 ```bash
 export CONFIG_BASE_DIR=$HOME/.config/mycroft
@@ -162,17 +159,22 @@ export CONFIG_BASE_DIR=$HOME/.config/mycroft
 
 ---
 
-## 🧪 Testing
+## Testing
 
-Once all services are up, you can test them using a Wyoming-compatible client.
+After all services start, test them with a Wyoming-compatible client.
+
+---
+
+## Feedback and contributions
+
+Pull requests are welcome. For a major change, open an issue first to discuss the change.
 
 ---
 
-## 💬 Feedback & Contributions
+## Related projects
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
-
----
+- [OpenVoiceOS/ovos-core](https://github.com/OpenVoiceOS/ovos-core) — the OVOS assistant core these images run.
+- [Rhasspy/wyoming](https://github.com/Rhasspy/wyoming) — the Wyoming Protocol used by these services.
 
 ## Credits
 
