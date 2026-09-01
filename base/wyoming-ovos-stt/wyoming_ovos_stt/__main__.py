@@ -42,10 +42,14 @@ async def main() -> None:
     _LOGGER.debug(args)
 
     cfg = Configuration().get("stt", {}).get(args.plugin_name, {})
-    lang = cfg.get("lang") or Configuration().get("lang")
+
     stt = OVOSSTTFactory.create({"module": args.plugin_name,
                                  args.plugin_name: cfg})
-    languages = list(stt.available_languages or [lang])
+    if "lang" in cfg: # single language plugin
+        lang = cfg.get("lang")
+        languages = [lang]
+    else:
+        languages = list(stt.available_languages or [Configuration().get("lang")])
 
     wyoming_info = Info(
         asr=[
